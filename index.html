@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+           <input type="text" readonly placeholder="0" id="result">
+            <table>
+                <tr>
+                    <td class="button" onclick="display('(')">(</td>
+                    <td class="button" onclick="display(')')">)</td>
+                    <!-- <td class="button"><i class="fa-solid fa-delete-left"></i></td> -->
+                    <td class="button" onclick="removeList()"><i class="fa-solid fa-delete-left" ></i></td>
+                    <td class="button" id="ac" onclick="allClear()">AC</i></td>
+                </tr>
+                <tr>
+                    <td class="button" onclick="display('7')">7</td>
+                    <td class="button" onclick="display('8')">8</td>
+                    <td class="button" onclick="display('9')">9</td>
+                    <td class="button operator" onclick="display('/')"><i class="fa-solid fa-divide"></i></td>
+                </tr>
+                <tr>
+                    <td class="button" onclick="display('4')">4</td>
+                    <td class="button" onclick="display('5')">5</td>
+                    <td class="button" onclick="display('6')">6</td>
+                    <td class="button operator" onclick="display('*')"><i class="fa-solid fa-xmark"></i></td>
+                </tr>
+                <tr>
+                    <td class="button" onclick="display('1')">1</td>
+                    <td class="button" onclick="display('2')">2</td>
+                    <td class="button" onclick="display('3')">3</td>
+                    <td class="button operator" onclick="display('-')"><i class="fa-solid fa-minus"></i></td>
+                </tr>
+                <tr>
+                    <td class="button" onclick="display('0')">0</td>
+                    <td class="button" onclick="display('.')">.</td>
+                    <td class="button operator" onclick="display('+')"><i class="fa-solid fa-plus"></i></td>
+                    <td class="button" id="equal" onclick="exprEval()"><i class="fa-solid fa-equals"></i></td>
+                </tr>
+            </table>                    
+        </div>
+    </div>
+</body>
+
+<script src="main.js"></script>
+</html>
